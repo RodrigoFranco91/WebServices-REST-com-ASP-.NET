@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LojaVirtual.br.com.correios.ws;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -11,9 +12,32 @@ using System.Web.Http.Description;
 
 namespace LojaVirtual.Models
 {
+    [RoutePrefix("api/orders")] //Adiciona-se essa annotation para poder realizar operacoes alem do CRUD!
     public class OrdersController : ApiController
     {
         private LojaVirtualContext db = new LojaVirtualContext();
+
+        // GET: api/orders/frete
+        // Esse método está calculando um frete de um valor costante declarado diretamente na chamada do método. Podemos trocar esse valores por atributos reais de Pedidos.
+        [ResponseType(typeof(string))]
+        [HttpGet]
+        [Route("frete")] //Nome do caminho do request
+        [Authorize]
+        public IHttpActionResult CalculaFrete()
+        {
+            string frete;
+            CalcPrecoPrazoWS correios = new CalcPrecoPrazoWS();
+            cResultado resultado = correios.CalcPrecoPrazo("", "", "40010", "37540000", "37002970", "1", 1, 30, 30, 30, 30, "N", 100, "S");
+            if (resultado.Servicos[0].Erro.Equals("0"))
+            {
+                frete = "Valor do frete: " + resultado.Servicos[0].Valor + " - Prazo de entrega: " + resultado.Servicos[0].PrazoEntrega + " dia(s)";
+                return Ok(frete);
+            }
+            else
+            {
+                return BadRequest("Código do erro: " + resultado.Servicos[0].Erro + "-" + resultado.Servicos[0].MsgErro);
+            }
+        }
 
         // GET: api/Orders
         [Authorize(Roles = "ADMIN")]
