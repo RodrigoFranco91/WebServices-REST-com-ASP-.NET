@@ -3,4 +3,10 @@
   <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-LojaVirtual-20190602015408.mdf;Initial Catalog=aspnet-LojaVirtual-20190602015408;Integrated Security=True" tags="SqlConnectionString">
     <parameterEntry kind="XmlFile" scope="C:\\Users\\Rodrigo\\Desktop\\Exercicio\\Web-API\\LojaVirtual\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
   </parameter>
+  <parameter name="LojaVirtualContext-Web.config Connection String" description="LojaVirtualContext Connection String used in web.config by the application to access the database." defaultValue="Data Source=(localdb)\MSSQLLocalDB; Initial Catalog=LojaVirtualContext-20190602155607; Integrated Security=True; MultipleActiveResultSets=True; AttachDbFilename=|DataDirectory|LojaVirtualContext-20190602155607.mdf" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Rodrigo\\Desktop\\Exercicio\\Web-API\\LojaVirtual\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='LojaVirtualContext']/@connectionString" />
+  </parameter>
+  <parameter name="LojaVirtualContext_DatabasePublish-Web.config Connection String" description="LojaVirtualContext_DatabasePublish Connection String used in web.config by the application to access the database." defaultValue="LojaVirtualContext_DatabasePublish.ConnetionString" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Rodrigo\\Desktop\\Exercicio\\Web-API\\LojaVirtual\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='LojaVirtualContext_DatabasePublish']/@connectionString" />
+  </parameter>
 </parameters>

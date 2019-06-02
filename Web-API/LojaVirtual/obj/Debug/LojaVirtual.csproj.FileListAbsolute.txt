@@ -111,3 +111,6 @@ C:\Users\Rodrigo\Desktop\Exercicio\Web-API\LojaVirtual\obj\Debug\LojaVirtual.csp
 C:\Users\Rodrigo\Desktop\Exercicio\Web-API\LojaVirtual\obj\Debug\LojaVirtual.csproj.CopyComplete
 C:\Users\Rodrigo\Desktop\Exercicio\Web-API\LojaVirtual\obj\Debug\LojaVirtual.dll
 C:\Users\Rodrigo\Desktop\Exercicio\Web-API\LojaVirtual\obj\Debug\LojaVirtual.pdb
+C:\Users\Rodrigo\Desktop\Exercicio\Web-API\LojaVirtual\obj\Debug\LojaVirtual.Migrations.addProduct.resources
+C:\Users\Rodrigo\Desktop\Exercicio\Web-API\LojaVirtual\obj\Debug\LojaVirtual.csproj.GenerateResource.cache
+C:\Users\Rodrigo\Desktop\Exercicio\Web-API\LojaVirtual\obj\Debug\LojaVirtual.Migrations.AddOrderItemAndOrder.resources
