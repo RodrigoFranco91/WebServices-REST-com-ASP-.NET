@@ -19,7 +19,7 @@ using LojaVirtual.Results;
 
 namespace LojaVirtual.Controllers
 {
-    [Authorize]
+    [Authorize]   
     [RoutePrefix("api/Account")]
     public class AccountController : ApiController
     {
