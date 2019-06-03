@@ -114,3 +114,5 @@ C:\Users\Rodrigo\Desktop\Exercicio\Web-API\LojaVirtual\obj\Release\LojaVirtual.p
 C:\Users\Rodrigo\Desktop\Exercicio\Web-API\LojaVirtual\obj\Release\LojaVirtual.Migrations.addProduct.resources
 C:\Users\Rodrigo\Desktop\Exercicio\Web-API\LojaVirtual\obj\Release\LojaVirtual.csproj.GenerateResource.cache
 C:\Users\Rodrigo\Desktop\Exercicio\Web-API\LojaVirtual\obj\Release\LojaVirtual.Migrations.AddOrderItemAndOrder.resources
+C:\Users\Rodrigo\Desktop\Exercicio\Web-API\LojaVirtual\bin\LojaVirtual.XmlSerializers.dll
+C:\Users\Rodrigo\Desktop\Exercicio\Web-API\LojaVirtual\obj\Release\LojaVirtual.XmlSerializers.dll

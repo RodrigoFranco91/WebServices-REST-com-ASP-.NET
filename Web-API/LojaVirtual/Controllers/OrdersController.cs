@@ -1,4 +1,5 @@
 ﻿using LojaVirtual.br.com.correios.ws;
+using LojaVirtual.CRMClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -36,6 +37,26 @@ namespace LojaVirtual.Models
             else
             {
                 return BadRequest("Código do erro: " + resultado.Servicos[0].Erro + "-" + resultado.Servicos[0].MsgErro);
+            }
+        }
+
+        // GET: api/orders/cep
+        // Esta action irá pegar o email do usuario logado e buscar por esse e-mail se há um Cliente com este mesmo e-mail no recurso CRM.
+        [ResponseType(typeof(string))]
+        [HttpGet]
+        [Route("cep")]
+        [Authorize]
+        public IHttpActionResult ObtemCEP()
+        {
+            CRMRestClient crmClient = new CRMRestClient();
+            Customer customer = crmClient.GetCustomerByEmail(User.Identity.Name);
+            if (customer != null)
+            {
+                return Ok(customer.zip);
+            }
+            else
+            {
+                return BadRequest("Falha ao consultar o CRM");
             }
         }
 
